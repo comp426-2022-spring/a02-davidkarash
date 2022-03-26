@@ -15,7 +15,8 @@
  */
 
 function coinFlip() {
-    return Math.random() > 0.5
+    if (Math.random() > 0.5) return 'heads'
+    else return 'tails'
 }
 
 /** Multiple coin flips
@@ -40,7 +41,7 @@ function coinFlip() {
 function coinFlips(flips) {
   const results = []
   for (let i=0; i<flips; i++) {
-    results.push(Math.random() > 0.5)
+    results.push(('heads','tails')[Math.random() > 0.5])
   }
   return results
 }
