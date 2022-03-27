@@ -1,10 +1,14 @@
 import min from 'minimist';
-import {coinFlips} from './modules/coin.mjs';
+import {coinFlips, countFlips} from './modules/coin.mjs';
 
 let args = min(process.argv.slice(2))
 
 if (args['number']) {
-    console.log(coinFlips(args['number']));
+    let results = coinFlips(args['number']);
+    console.log(results);
+    console.log(countFlips(results));
 } else {
-    console.log(coinFlips(1));
+    let results = coinFlips(1)
+    console.log(results);
+    console.log(countFlips(results));
 }
