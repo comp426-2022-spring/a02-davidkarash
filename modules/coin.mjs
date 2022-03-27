@@ -41,7 +41,7 @@ function coinFlip() {
 function coinFlips(flips) {
   const results = []
   for (let i=0; i<flips; i++) {
-    results.push(('heads','tails')[Math.random() > 0.5])
+    results.push(coinFlip())
   }
   return results
 }
